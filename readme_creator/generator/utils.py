@@ -7,7 +7,7 @@ def fetch_github_data(url):
         owner, repo = parts[-2], parts[-1]
 
        
-        api_url = f"https://api.github.com/repos/{owner}/{repo}"
+        api_url = f"https://api.github.com/{owner}/repos/{repo}"
         response = requests.get(api_url)
 
         if response.status_code == 200:

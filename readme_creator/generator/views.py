@@ -30,4 +30,4 @@ def generate_readme_from_github(request):
     else:
         form = GitHubURLForm()
 
-    return render(request, "generator/github_form.html", {"form": form})
+    return render(request, "github_forms.html", {"form": form})
