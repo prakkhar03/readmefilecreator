@@ -5,8 +5,7 @@ def fetch_github_data(url):
         parts = url.strip("/").split("/")
         owner, repo = parts[-2], parts[-1]
         api_url = f"https://api.github.com/repos/{owner}/{repo}"
-        headers = {"Accept": "application/vnd.github.mercy-preview+json"} 
-        response = requests.get(api_url, headers=headers)
+        response = requests.get(api_url)
         response.raise_for_status()
         data = response.json()
 
