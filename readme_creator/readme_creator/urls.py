@@ -4,5 +4,5 @@ from generator import views
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("sentiment/", views.generate_readme_from_github, name="generate_readme"),  # Ensure this is the main root route
+    path("", views.generate_readme_from_github, name="generate_readme"),  # Ensure this is the main root route
 ]
